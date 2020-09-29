@@ -12,7 +12,7 @@ class quadraticEquation{
 		b = s.nextDouble();
 		c = s.nextDouble();
 
-    det = (b*b) - (4*a*c);
+    		det = (b*b) - (4*a*c);
 
 		if (det > 0){
 			r1 = (-b + Math.sqrt(det)) / (2 * a);
