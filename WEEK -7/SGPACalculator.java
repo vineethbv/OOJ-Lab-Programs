@@ -117,7 +117,7 @@ class Result extends Exam{
         }
 }
 
-public class Main {
+public class SGPACalculator {
     public static void main(String[] args) {
         int n = 0;
         Scanner sc = new Scanner(System.in);
