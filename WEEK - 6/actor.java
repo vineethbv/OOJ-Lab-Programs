@@ -26,7 +26,7 @@ class Actor {
   }
 
   public void setName() {
-    String name = s.nextLine();
+    String name = s.next();
     this.name = name;
   }
 
