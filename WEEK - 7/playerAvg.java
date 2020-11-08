@@ -145,7 +145,7 @@ class Bowler extends Player {
   }
 }
 
-class Main {
+class playerAvg {
   public static void main(String[] args) {
     int m, n, i;
     Scanner s = new Scanner(System.in);
