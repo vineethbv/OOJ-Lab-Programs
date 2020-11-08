@@ -90,6 +90,7 @@ class actor {
       act[i].printData();
     }
 
+    System.out.println("\nHighest average: ");
     for (i = 0; i < n; i++) {
       if (act[i].getAvgPerformance() > highestAvg) {
         highestAvg = act[i].getAvgPerformance();
