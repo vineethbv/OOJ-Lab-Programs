@@ -32,7 +32,7 @@ class Test<X, Y, Z, W> {
   }
 }
 
-class Main {
+class Generics {
   public static void main(String[] args) {
     Test<Integer, String, Integer, Integer> t = new Test<Integer, String, Integer, Integer>(10, "Vineeth", 11, 12);
 
