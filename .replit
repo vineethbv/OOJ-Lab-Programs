@@ -1,0 +1,2 @@
+language = "java10"
+run = "javac Generics.java; java Generics"
