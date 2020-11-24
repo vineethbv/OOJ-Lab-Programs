@@ -1,3 +1,5 @@
+/*Write a program to demonstrate generics with multiple object parameters.*/
+
 class Test<X, Y, Z, W> {
   X projects;
   Y name;
