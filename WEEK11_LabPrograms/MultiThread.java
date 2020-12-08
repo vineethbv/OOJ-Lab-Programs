@@ -25,7 +25,7 @@ class NewThread implements Runnable {
 	}
 }
 
-class Main {
+class MultiThread {
 	public static void main(String args[]) {
 		new NewThread("BMSCE", 10000);
 		new NewThread("CSE", 2000);
