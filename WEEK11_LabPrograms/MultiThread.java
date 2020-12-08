@@ -1,44 +1,36 @@
-class A implements Runnable {
-    Thread t;
-    A() {
-        t = new Thread(this, "BMSCE");
-        t.start();
+class NewThread implements Runnable 
+{
+	private String name;
+  private int interval;
+	private Thread t;
+
+	NewThread(String threadname, int interval) 
+	{
+		this.name = threadname;
+    this.interval = interval;
+		t = new Thread(this, name);
+		t.start();
+	}
+
+	public void run() 
+	{
+		try {
+			while(true) {
+        System.out.println("Thread: " + this.name);
+        Thread.sleep(this.interval);
+      }
     }
-    
-    public void run() {
-        try {
-            while(true) {
-                System.out.println("BMSCE");
-                Thread.sleep(10000);
-            }
-        } catch(InterruptedException e) {
-            System.out.println(e);
-        }
-    }
+    catch (InterruptedException e) {
+		  System.out.println(name + "Interrupted");
+		}
+	}
 }
 
-class B implements Runnable {
-    Thread t;
-    B() {
-        t = new Thread(this, "CSE");
-        t.start();
-    }
-    
-    public void run() {
-        try {
-            while(true) {
-                System.out.println("CSE");
-                Thread.sleep(2000);
-            }
-        } catch(InterruptedException e) {
-            System.out.println(e);
-        }
-    }
-}
-
-public class MultiThread {
-	public static void main(String[] args) {
-		new A();
-		new B();
+class MultiThread
+{
+	public static void main(String args[]) 
+	{
+		new NewThread("BMSCE", 10000);
+		new NewThread("CSE", 2000);
 	}
 }
