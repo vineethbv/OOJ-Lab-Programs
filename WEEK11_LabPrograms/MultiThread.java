@@ -1,22 +1,21 @@
-class NewThread implements Runnable 
-{
+class NewThread implements Runnable {
 	private String name;
-	private int interval;
+  private int interval;
 	private Thread t;
 
-	NewThread(String threadname, int interval) 
-	{
+	NewThread(String threadname, int interval) {
 		this.name = threadname;
     this.interval = interval;
 		t = new Thread(this, name);
 		t.start();
 	}
 
-	public void run() 
-	{
+	public void run() {
+    int i = 1, n = 5;
 		try {
-			while(true) {
+			while(i <= n) {
         System.out.println("Thread: " + this.name);
+        i++;
         Thread.sleep(this.interval);
       }
     }
@@ -26,10 +25,8 @@ class NewThread implements Runnable
 	}
 }
 
-class MultiThread
-{
-	public static void main(String args[]) 
-	{
+class Main {
+	public static void main(String args[]) {
 		new NewThread("BMSCE", 10000);
 		new NewThread("CSE", 2000);
 	}
