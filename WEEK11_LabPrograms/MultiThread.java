@@ -1,7 +1,7 @@
 class NewThread implements Runnable 
 {
 	private String name;
-  private int interval;
+	private int interval;
 	private Thread t;
 
 	NewThread(String threadname, int interval) 
