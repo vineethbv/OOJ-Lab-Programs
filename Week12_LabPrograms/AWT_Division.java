@@ -1,5 +1,16 @@
 import java.awt.*;
 import java.awt.event.*;
+import javax.swing.*;
+import javax.swing.JFrame;
+
+class dialogERR {
+  JFrame frame;
+
+  dialogERR() {
+    frame = new JFrame();
+    JOptionPane.showMessageDialog(frame, "Cannot divide by non-integer values");
+  }
+}
 
 public class AWT_Division extends Frame implements ActionListener {
   TextField tf1, tf2;
@@ -47,10 +58,8 @@ public class AWT_Division extends Frame implements ActionListener {
       l.setText("Quotient: " + q);
       add(l);
     }
-    catch(NumberFormatException ze) {
-      l.setBounds(25, 150, 300, 50);
-      l.setText("Cannot divide non-numeric / non-integer values");
-      add(l);
+    catch(NumberFormatException ne) {
+      new dialogERR();
     }
     catch(ArithmeticException ze) {
       l.setBounds(125, 150, 100, 50);
@@ -66,3 +75,4 @@ public class AWT_Division extends Frame implements ActionListener {
     new Main();  
   }
 }
+
