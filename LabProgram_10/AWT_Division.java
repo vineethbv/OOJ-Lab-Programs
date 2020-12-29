@@ -17,7 +17,7 @@ public class AWT_Division extends Frame implements ActionListener {
   Label l;
   Button b;
 
-  Main() {
+  AWT_Division() {
     tf1 = new TextField();
     tf1.setBounds(75, 50, 200, 25);
     
@@ -29,6 +29,12 @@ public class AWT_Division extends Frame implements ActionListener {
     b = new Button("Divide");
     b.setBounds(125, 200, 100, 50);
     b.addActionListener(this);
+    
+    addWindowListener(new WindowAdapter(){
+      public void windowClosing(WindowEvent e) {
+         dispose();
+      }
+    });
     
     add(b);
     add(tf1);
@@ -69,10 +75,11 @@ public class AWT_Division extends Frame implements ActionListener {
     catch(Exception ex) {
       System.out.println(ex);
     }
+    
   }
   
   public static void main(String[] args) {
-    new Main();  
+    new AWT_Division();  
   }
 }
 
